@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: theband
+  labels:
+    app: theband
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: theband
+  template:
+    metadata:
+      labels:
+        app: theband
+    spec:
+      containers:
+      - name: theband
+        image: shehmil/theband:3
+        ports:
+        - containerPort: 3000
