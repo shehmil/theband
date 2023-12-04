@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: theband
-        image: shehmil/theband:3
+        image: shehmil/theband:15
         ports:
         - containerPort: 3000
